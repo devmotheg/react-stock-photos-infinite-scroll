@@ -5,7 +5,7 @@
 
 import React, { useState, useEffect } from "react";
 import { FaSearch } from "react-icons/fa";
-import { QueryClient, useInfiniteQuery } from "react-query";
+import { useQueryClient, useInfiniteQuery } from "react-query";
 
 import Loading from "./Loading";
 import PhotoCard from "./PhotoCard";
@@ -14,7 +14,8 @@ const ACCESS_KEY = "frS4pvuZXVojHJwe5yniGI6kUGqht5Kwc-E8_Y2E1Ok";
 const MAIN_URL = "https://api.unsplash.com/photos/?client_id=";
 const SEARCH_URL = "https://api.unsplash.com/search/photos/?client_id=";
 
-const Project = ({ queryClient }: { queryClient: QueryClient }) => {
+const Project = () => {
+	const queryClient = useQueryClient();
 	const [search, setSearch] = useState("");
 	const [fetchSearch, setFetchSearch] = useState("");
 

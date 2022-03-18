@@ -19,7 +19,7 @@ const queryClient = new QueryClient({
 
 const App = () => (
 	<QueryClientProvider client={queryClient}>
-		<Project queryClient={queryClient} />
+		<Project />
 		<a
 			className="block mx-auto mt-12 mb-4 text-sm font-bold w-fit"
 			href="https://github.com/devmotheg">
